@@ -9,32 +9,30 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Matrix Sales Solutions home">
-        <span class="brand-mark">MS</span>
-        <span>Mark Matrix Security Solutions</span>
-      </a>
+      <a class="brand" href="index.html" aria-label="Home">
+			<img src="assets/companyLogo.png" alt="Company Logo" class="site-logo" />
+			<span>Mark Matrix Security Solutions</span>
+</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="products.html" aria-current="page">Our Product Range</a>
-        <a href="clients.html">Our Pet Clients</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="products.html">Product Range</a>
+        <a href="clients.html">Pet Clients</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+		<a href="director.html">Director Profile</a>
       </nav>
     </header>
 
     <main>
       <section class="page-hero">
         <p class="eyebrow">Our Product Range</p>
-        <h1>Editable product categories with interactive filtering.</h1>
-        <p>
-          Replace these test products with real product names, descriptions, images, pricing, and
-          enquiry links.
-        </p>
+        <h1>We at Mark Matrix Security Solutions, deal in following Products:</h1>
+        <p></p>
       </section>
 
       <section class="section">
@@ -48,13 +46,26 @@
         <div class="product-grid">
           <article class="product-card" data-category="hardware">
             <img
-              src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=700&q=80"
+              src="assets/cctv-camera.jpg"
               alt="Sample industrial product"
             />
             <div>
               <span>Hardware</span>
-              <h2>Access Control Device</h2>
-              <p>Sample editable text for product features, installation notes, and support.</p>
+              <h2>CCTV Camera</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: model number, warranty, installation scope.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/drones.jpg"
+              alt="Sample industrial product"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>Drones</h2>
+              <p>Text to be added</p>
               <button class="details-toggle" type="button">View Details</button>
               <p class="details hidden">Test details: model number, warranty, installation scope.</p>
             </div>
@@ -66,8 +77,8 @@
             />
             <div>
               <span>Software</span>
-              <h2>Sales Tracking Dashboard</h2>
-              <p>Sample product description for tracking leads, enquiries, and monthly reports.</p>
+              <h2>Coming Soon...</h2>
+              <p>Text to be added</p>
               <button class="details-toggle" type="button">View Details</button>
               <p class="details hidden">Test details: lead status, reporting, export options.</p>
             </div>
@@ -80,20 +91,111 @@
             <div>
               <span>Service</span>
               <h2>Customer Enquiry Support</h2>
-              <p>Sample text for service packages, SLA information, and support workflow.</p>
+              <p>Text to be added</p>
               <button class="details-toggle" type="button">View Details</button>
               <p class="details hidden">Test details: phone support, email follow-up, CRM entry.</p>
             </div>
           </article>
           <article class="product-card" data-category="hardware">
             <img
-              src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?auto=format&fit=crop&w=700&q=80"
+              src="assets/smartDoorLock.jpg"
               alt="Security camera sample"
             />
             <div>
               <span>Hardware</span>
-              <h2>Surveillance Kit</h2>
-              <p>Sample editable text for camera kits, storage, monitoring, and installation.</p>
+              <h2>Smart Door Lock</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: camera count, storage days, remote access.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/biometrics.jpg"
+              alt="Security camera sample"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>Biometrics & Access Control System</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: camera count, storage days, remote access.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/solarsystems.jpg"
+              alt="Security camera sample"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>Solar Systems</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: camera count, storage days, remote access.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/airCondition.png"
+              alt="Security camera sample"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>Air Conditioning System</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: camera count, storage days, remote access.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/fingerSensor.jpg"
+              alt="Security camera sample"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>FingerPrint Sensors</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: camera count, storage days, remote access.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/networking.jpg"
+              alt="Security camera sample"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>IT Products & Networking</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: camera count, storage days, remote access.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/electronics.jpg"
+              alt="Security camera sample"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>Electronics & Electrical Goods</h2>
+              <p>Text to be added</p>
+              <button class="details-toggle" type="button">View Details</button>
+              <p class="details hidden">Test details: camera count, storage days, remote access.</p>
+            </div>
+          </article>
+		  <article class="product-card" data-category="hardware">
+            <img
+              src="assets/cables.jpg"
+              alt="Security camera sample"
+            />
+            <div>
+              <span>Hardware</span>
+              <h2>Cables</h2>
+              <p>Text to be added</p>
               <button class="details-toggle" type="button">View Details</button>
               <p class="details hidden">Test details: camera count, storage days, remote access.</p>
             </div>
