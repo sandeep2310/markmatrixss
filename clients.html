@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Interactive sample client page." />
+    <title>Matrix Sales Solutions | Our Pet Clients</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Matrix Sales Solutions home">
+        <span class="brand-mark">MS</span>
+        <span>Matrix Sales Solutions</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Our Product Range</a>
+        <a href="clients.html" aria-current="page">Our Pet Clients</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Our Pet Clients</p>
+        <h1>Interactive sample client showcase.</h1>
+        <p>
+          This page uses test company names and generated text logos. Replace them with your real
+          client names, logos, testimonials, and links.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="client-grid">
+          <article class="client-card" tabindex="0">
+            <div class="sample-logo">AN</div>
+            <h2>Alpha Nexus Pvt Ltd</h2>
+            <p>Sample client for testing card hover, focus, and expandable content.</p>
+            <button class="client-more" type="button">Show More</button>
+            <div class="client-extra hidden">
+              <p>Test project: enquiry management, product demo tracking, and support reporting.</p>
+            </div>
+          </article>
+          <article class="client-card" tabindex="0">
+            <div class="sample-logo orange">BQ</div>
+            <h2>Blue Quartz Industries</h2>
+            <p>Sample client logo and name for visual testing on the client page.</p>
+            <button class="client-more" type="button">Show More</button>
+            <div class="client-extra hidden">
+              <p>Test project: sales enquiry workflow, lead response process, and monthly reports.</p>
+            </div>
+          </article>
+          <article class="client-card" tabindex="0">
+            <div class="sample-logo green">RS</div>
+            <h2>Rapid Secure Systems</h2>
+            <p>Additional test company to verify layout with three or more cards.</p>
+            <button class="client-more" type="button">Show More</button>
+            <div class="client-extra hidden">
+              <p>Test project: product catalogue setup, client query form, and service dashboard.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Matrix Sales Solutions. Test website.</p>
+      <a href="contact.html">Contact</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
