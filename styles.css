@@ -1,15 +1,15 @@
 :root {
-  --bg: #FFFFFF;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --surface-alt: #e9efe8;
-  --ink: #162018;
-  --muted: #58645d;
-  --line: #d8ded6;
-  --accent: #0f766e;
-  --accent-dark: #115e59;
-  --warning: #b45309;
-  --danger: #b42318;
-  --shadow: 0 18px 48px rgba(22, 32, 24, 0.12);
+  --surface-alt: #eaf2ff;
+  --ink: #10233e;
+  --muted: #5c6b80;
+  --line: #d6e2f2;
+  --accent: #2563eb;
+  --accent-dark: #1e3a8a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --shadow: 0 18px 48px rgba(30, 58, 138, 0.12);
 }
 
 * {
@@ -55,15 +55,18 @@ textarea {
   justify-content: space-between;
   gap: 20px;
   padding: 14px clamp(10px, 7vw, 25px);
-  background: rgba(246, 247, 244, 0.94);
+  background: #142d66;
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
+  color: #ffffff;
 }
 
 .brand {
-  display: inline-flex;
+  display: flex;              /* Better than inline-flex for responsiveness */
   align-items: center;
   gap: 12px;
+  flex: 1;                    /* Allows brand section to occupy available space */
+  min-width: 0;               /* Prevents overflow in flex layouts */
   font-weight: 795;
   font-size: 2rem;
 }
@@ -82,7 +85,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 20px;
-  color: var(--muted);
+  color: #ffffff;
   font-size: 0.95rem;
   font-weight: 750;
 }
@@ -93,7 +96,7 @@ textarea {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
-  color: var(--accent-dark);
+  color: #3bf52a;
 }
 
 .nav-toggle {
@@ -450,7 +453,7 @@ h3 {
 }
 
 .sample-logo.green {
-  background: #287847;
+  background: #1e40af;
 }
 
 .client-extra {
@@ -509,7 +512,7 @@ textarea {
   width: 100%;
   padding: 13px 14px;
   color: var(--ink);
-  background: #fbfcfa;
+  background: #fbfdff;
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -518,7 +521,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--accent);
-  outline: 3px solid rgba(15, 118, 110, 0.14);
+  outline: 3px solid rgba(37, 99, 235, 0.14);
 }
 
 .error-message {
@@ -535,8 +538,8 @@ textarea:focus {
   margin-top: 16px;
   padding: 14px;
   color: var(--accent-dark);
-  background: #e3f4ef;
-  border: 1px solid #b8dcd2;
+  background: #e8f1ff;
+  border: 1px solid #bfd3f8;
   border-radius: 8px;
 }
 

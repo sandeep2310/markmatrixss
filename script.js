@@ -105,12 +105,11 @@ function simulateDelivery(data) {
   deliveryLog.replaceChildren();
 
   [
-    ["Email prepared for", "abc@abc.com"],
-    ["SMS prepared for", "99999999999"],
     ["Name", data.name],
     ["Mobile", data.mobile],
     ["Purpose", data.purpose],
     ["Other Info", data.otherInfo || "Not provided"],
+	["Status", "Submitted"],
   ].forEach(([label, value]) => {
     const line = document.createElement("p");
     const strong = document.createElement("strong");
@@ -120,14 +119,12 @@ function simulateDelivery(data) {
   });
 
   console.info("Test enquiry submitted:", {
-    sendEmailTo: "abc@abc.com",
-    sendSmsTo: "99999999999",
     enquiry: data,
   });
 }
 
 if (enquiryForm) {
-  enquiryForm.addEventListener("submit", (event) => {
+  enquiryForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const data = getFormData(enquiryForm);
@@ -136,7 +133,49 @@ if (enquiryForm) {
       return;
     }
 
-    simulateDelivery(data);
-    enquiryForm.reset();
+    const formStatus = document.querySelector("#formStatus");
+    const submitButton = enquiryForm.querySelector(".submit-button");
+
+    if (formStatus) {
+      formStatus.textContent = "Sending your enquiry...";
+    }
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+
+    try {
+      const formData = new FormData(enquiryForm);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        if (formStatus) {
+          formStatus.textContent = "Thank you. Your enquiry has been submitted successfully.";
+        }
+
+        simulateDelivery(data);
+        enquiryForm.reset();
+      } else {
+        if (formStatus) {
+          formStatus.textContent = result.message || "Submission failed. Please try again.";
+        }
+      }
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = "Something went wrong. Please try again later.";
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+      }
+    }
   });
 }
