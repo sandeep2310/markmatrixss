@@ -420,6 +420,18 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.clientss-card {
+  width: 220px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.clientss-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .sample-logo {
   display: grid;
   width: 72px;
@@ -614,11 +626,13 @@ textarea:focus {
   }
 
   .brand span:last-child {
-	font-size: 5rem;
-    max-width: 190px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    max-width: none;
+    line-height: 1.2;
   }
 
   .hero,
@@ -650,3 +664,4 @@ textarea:focus {
     flex-direction: column;
   }
 }
+
